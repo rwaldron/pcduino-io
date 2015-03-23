@@ -11,7 +11,7 @@ pcDuino-IO is a Firmata.js-compatibility class for writing Node.js programs that
 
 pcDuino-IO scripts are run directly from the pcDuino3 (or similar in family) board. Assuming your pcDuino has already been setup for networking, getting started is easy: 
 
-1. Install a compatible version of node/npm
+#### Install a compatible version of node/npm
 ```sh
 wget http://nodejs.org/dist/v0.10.24/node-v0.10.24-linux-arm-pi.tar.gz
 tar xvzf node-v0.10.24-linux-arm-pi.tar.gz
@@ -19,14 +19,14 @@ cd node-v0.10.24-linux-arm-pi
 sudo cp -R * /usr/local
 ```
 
-2. Create a directory for your project, cd into the directory and run the following: 
+#### Create a directory for your project, cd into the directory and run the following: 
 
 ```sh
 npm init; # follow the prompts
 npm install johnny-five pcduino-io --save
 ```
 
-3. Hello World!
+#### Hello World!
 ```js
 var pcDuino = require("pcduino-io");
 var board = new pcDuino();
@@ -39,7 +39,7 @@ board.on("ready", function() {
 });
 ```
 
-4. With Johnny-Five
+#### ...With Johnny-Five
 ```js
 var five = require("johnny-five");
 var pcDuino = require("pcduino-io");
