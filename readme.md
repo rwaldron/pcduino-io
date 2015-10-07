@@ -1,11 +1,14 @@
+![](https://github.com/rwaldron/pcduino-io/raw/master/logo.png)
+
 # pcDuino-IO
+
 
 [![Build Status](https://travis-ci.org/rwaldron/pcduino-io.png?branch=master)](https://travis-ci.org/rwaldron/pcduino-io)
 
-## pcDuino-IO is compatible with pcDuino3.
+## pcDuino-IO is compatible with pcDuino3
 
 
-pcDuino-IO is a Firmata.js-compatibility class for writing Node.js programs that run on the [pcDuino3](http://www.pcduino.com/). This project was built at [Bocoup](http://bocoup.com)
+pcDuino-IO is an [IO-Plugin](https://github.com/rwaldron/io-plugins) class for writing Node.js programs with [Johnny-Five](https://github.com/rwaldron/johnny-five) that run on the [pcDuino3](http://www.pcduino.com/). This project was built at [Bocoup](http://bocoup.com)
 
 ### Getting Started
 
@@ -26,20 +29,7 @@ npm init; # follow the prompts
 npm install johnny-five pcduino-io --save
 ```
 
-#### Hello World!
-```js
-var pcDuino = require("pcduino-io");
-var board = new pcDuino();
-
-board.on("ready", function() {
-  this.pinMode(13, this.MODES.OUTPUT);
-  setInterval(function() {
-    this.digitalWrite(13, (state ^= 1));
-  }.bind(this), 500);
-});
-```
-
-#### ...With Johnny-Five
+#### "Hello World!" with Johnny-Five
 ```js
 var five = require("johnny-five");
 var pcDuino = require("pcduino-io");
@@ -53,9 +43,8 @@ board.on("ready", function() {
 });
 ```
 
-
-
-[See Johnny-Five's examples for usage.](https://github.com/rwaldron/johnny-five)
+- See [Johnny-Five's API](http://johnny-five.io/api/) for information!
+- See [Johnny-Five's examples](http://johnny-five.io/examples/) for inspiration!
 
 ## License
 See LICENSE file.
